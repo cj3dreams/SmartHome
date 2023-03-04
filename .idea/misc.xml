@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/menu/menu_items.xml" value="0.21" />
       </map>
     </option>
   </component>
