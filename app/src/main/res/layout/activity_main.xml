@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkBackground"
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -17,9 +18,11 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         app:menu="@menu/menu_items"
-        app:labelVisibilityMode="selected"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@drawable/bottombar_background_color"
+        app:itemIconTint="@drawable/tab_color_selector"
         android:layout_alignParentBottom="true"/>
 
 
