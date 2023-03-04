@@ -20,34 +20,193 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="20dp"
             android:layout_alignParentStart="true"
             android:id="@+id/homeHumidityCv"
             android:layout_marginTop="-70dp"
             android:layout_below="@+id/homeImgView"
-            android:layout_width="186dp"
+            android:layout_width="187dp"
             android:layout_height="218dp"
             app:cardCornerRadius="18dp"
             app:cardPreventCornerOverlap="true"
             app:cardUseCompatPadding="true"
             card_view:cardElevation="20"
             android:backgroundTint="@color/darkBackgroundSecondary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="18dp">
+
+            <RelativeLayout
+                android:id="@+id/homeHumidityRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="36%"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_humidity"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/homeHumidityNameTx"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/homeHumidityRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="Humidifier\nAir"
+                    android:textSize="13sp"
+                    android:textColor="@color/tab_color_unselected"/>
+
+                <View
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/homeHumidityNameTx"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#393535"/>
+
+                <RelativeLayout
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/homeHumiditySwitcherRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/homeHumiditySwitcherTx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="Mode 2"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tab_color_unselected"/>
+
+                    <com.fynn.switcher.Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        app:checked="true"
+                        app:spotOffColor="@color/white"
+                        app:spotOnColor="@color/darkBackgroundSecondary"
+                        app:switchOffColor="@color/darkBackground"
+                        app:switchOnColor="@color/tab_color_selected" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="20dp"
             android:layout_alignParentEnd="true"
-            android:id="@+id/homePurifierCv"
+            android:id="@+id/homeCleanCv"
             android:layout_marginTop="-70dp"
             android:layout_below="@+id/homeImgView"
-            android:layout_width="186dp"
+            android:layout_width="187dp"
             android:layout_height="218dp"
             app:cardCornerRadius="18dp"
             app:cardPreventCornerOverlap="true"
             app:cardUseCompatPadding="true"
             card_view:cardElevation="20"
             android:backgroundTint="@color/darkBackgroundSecondary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="18dp">
+
+            <RelativeLayout
+                android:id="@+id/homeCleanRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="73%"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_clean"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/homeCleanNameTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homeCleanRl"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="Purifier\nAir"
+                    android:textColor="@color/tab_color_unselected"
+                    android:textSize="13sp" />
+
+            <View
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/homeCleanNameTx"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#393535"/>
+
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:id="@+id/homeHumidityCleanRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/homeHumidityCleanTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="On"
+                    android:textSize="13sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/tab_color_unselected"/>
+
+                <com.fynn.switcher.Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    app:spotOnColor="@color/darkBackgroundSecondary"
+                    app:spotOffColor="@color/white"
+                    app:checked="true"
+                    app:switchOffColor="@color/darkBackground"
+                    app:switchOnColor="@color/tab_color_selected" />
+            </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/homeLightCv"
+            android:layout_width="match_parent"
+            android:layout_height="154dp"
+            android:layout_below="@+id/homeCleanCv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="-7dp"
+            android:backgroundTint="@color/darkBackgroundSecondary"
+            app:cardCornerRadius="18dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            card_view:cardElevation="20">
 
         </androidx.cardview.widget.CardView>
 
