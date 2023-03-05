@@ -1,4 +1,4 @@
-package com.cj3dreams.smarthome.view.ui.home
+package com.cj3dreams.smarthome.view.adapter.home
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cj3dreams.smarthome.R
-import com.cj3dreams.smarthome.model.ItemHorizontal
+import com.cj3dreams.smarthome.model.PanelsModel
 
-class HomeHorizontalAdapter(private val list: List<ItemHorizontal>):RecyclerView.Adapter<HomeHorizontalAdapter.HomeHorizontalViewHolder>() {
+class HomePanelsAdapter(private val list: List<PanelsModel>):RecyclerView.Adapter<HomePanelsAdapter.HomeHorizontalViewHolder>() {
 
     class HomeHorizontalViewHolder(view: View): RecyclerView.ViewHolder(view){
 
@@ -21,7 +21,7 @@ class HomeHorizontalAdapter(private val list: List<ItemHorizontal>):RecyclerView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeHorizontalViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_horizontals, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_panel, parent, false)
 
         return HomeHorizontalViewHolder(view)
     }

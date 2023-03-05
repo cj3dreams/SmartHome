@@ -9,27 +9,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".view.ui.home.HomeFragment">
 
-
     <RelativeLayout
         android:focusableInTouchMode="true"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
-
-        <Button
-            android:layout_marginTop="40dp"
-            android:layout_marginHorizontal="26dp"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:background="@drawable/ic_back" />
-
-
-        <Button
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginHorizontal="26dp"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:background="@drawable/ic_bell" />
 
     <ImageView
         android:scaleType="centerCrop"
@@ -41,19 +24,41 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="42dp"
             android:fontFamily="@font/manrope_regular"
-            android:textColor="@color/white"
             android:gravity="center"
-            android:text="Bedroom"/>
+            android:text="Bedroom"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
+        <ImageView
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:layout_marginTop="42dp"
+            android:layout_marginHorizontal="26dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/ic_back" />
+
+        <ImageView
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="42dp"
+            android:layout_marginHorizontal="26dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/ic_bell" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:nestedScrollingEnabled="false"
             android:overScrollMode="never"
-            tools:listitem="@layout/item_horizontals"
-            tools:itemCount="1"
+            tools:listitem="@layout/item_panel"
+            tools:itemCount="2"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:spanCount="2"
             app:cardCornerRadius="18dp"
             android:layout_below="@+id/homeImgView"
             android:layout_marginHorizontal="16dp"
@@ -65,7 +70,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/homeLightCv"
             android:layout_width="match_parent"
-            android:layout_height="154dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/homeRecyclerView"
             android:layout_alignParentEnd="true"
             android:layout_marginHorizontal="16dp"
@@ -76,9 +81,92 @@
             app:cardUseCompatPadding="true"
             card_view:cardElevation="20">
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/homeMainLightTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="Main Light"
+                    android:textColor="@color/tab_color_unselected"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:id="@+id/homeMainLightRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/homeMainLightTx">
+
+                    <vn.nms.dynamic_seekbar.DynamicSeekBarView
+                        android:id="@+id/homeMainLightRs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="-30dp"
+                        android:layout_marginEnd="30dp"
+                        app:dsbv_isHideInfo="true"
+                        app:dsbv_progress="75"
+                        app:dsbv_progressBackgroundColor="@color/light_background"
+                        app:dsbv_progressColor="@color/tab_color_selected"
+                        app:dsbv_thumbDrawable="@drawable/ic_selector" />
+
+                    <ImageView
+                        android:id="@+id/homeMainLightImgView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_main_lamp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/homeFloorLightTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homeMainLightRl"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="Floor Light"
+                    android:textColor="@color/tab_color_unselected"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:id="@+id/homeFloorLightRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/homeFloorLightTx">
+
+                    <vn.nms.dynamic_seekbar.DynamicSeekBarView
+                        android:id="@+id/homeFloorLightRs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="-30dp"
+                        android:layout_marginEnd="30dp"
+                        app:dsbv_isHideInfo="true"
+                        app:dsbv_progress="30"
+                        app:dsbv_progressBackgroundColor="@color/light_background"
+                        app:dsbv_progressColor="@color/tab_color_selected"
+                        app:dsbv_thumbDrawable="@drawable/ic_selector" />
+
+                    <ImageView
+                        android:id="@+id/homeFloorLightImgView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_floor_lamp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
-
-
     </RelativeLayout>
-
 </androidx.core.widget.NestedScrollView>

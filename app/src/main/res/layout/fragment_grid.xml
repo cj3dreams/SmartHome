@@ -1,0 +1,23 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:background="@color/darkBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.ui.home.HomeFragment">
+
+    <TextView
+        android:fontFamily="@font/manrope_semibold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Coming soon..." />
+
+</RelativeLayout>

@@ -1,14 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:background="@color/darkBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".view.ui.search.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:focusableInTouchMode="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <RelativeLayout
+            android:id="@+id/searchTxRl"
+            android:layout_marginTop="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/searchTx"
+                android:layout_marginStart="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_regular"
+                android:gravity="start"
+                android:text="Search"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_marginEnd="25dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/searchWifiTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_regular"
+                android:text="Wifi:tw1r_413_7G_by_cj3dreams"
+                android:textColor="@color/tab_color_unselected"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/searchDevicesTx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchTxRl"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/manrope_medium"
+            android:text="3 new devices"
+            android:textColor="@color/tab_color_unselected"
+            android:textSize="17sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchDevicesTx"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            tools:itemCount="4"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_devices"
+            tools:spanCount="2" />
+
+        <Button
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_below="@+id/searchRecyclerView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="26dp"
+            android:fontFamily="@font/manrope_semibold"
+            android:background="@drawable/corner_button"
+            android:text="Add device"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

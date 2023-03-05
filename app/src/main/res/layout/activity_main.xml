@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/mainBottomNavigationBar"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/nav_graph"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -26,6 +26,4 @@
         android:background="@drawable/bottombar_background_color"
         app:itemIconTint="@drawable/tab_color_selector"
         android:layout_alignParentBottom="true"/>
-
-
 </RelativeLayout>

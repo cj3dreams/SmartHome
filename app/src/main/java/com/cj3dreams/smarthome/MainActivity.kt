@@ -4,12 +4,17 @@ import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationBarView
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
     private lateinit var navHostFragment: NavHostFragment
     lateinit var navController: NavController
 
@@ -31,14 +36,15 @@ class MainActivity : AppCompatActivity() {
         navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
+
+        mainBottomNavigationBar.setupWithNavController(navController)
     }
 
     private fun setWindowFlag(bits: Int, on: Boolean) {
         val win = window
         val winParams = win.attributes
         if (on) winParams.flags = winParams.flags or bits
-         else winParams.flags = winParams.flags and bits.inv()
+        else winParams.flags = winParams.flags and bits.inv()
         win.attributes = winParams
     }
-
 }

@@ -4,17 +4,34 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/bottombar_background_color.xml" value="0.14432989690721648" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/corner_button.xml" value="0.19444444444444445" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/dashed_lines.xml" value="0.19444444444444445" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_back.xml" value="0.19444444444444445" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_floor_lamp.xml" value="0.19444444444444445" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_grid.xml" value="0.14432989690721648" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_home.xml" value="0.14432989690721648" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14432989690721648" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_main_lamp.xml" value="0.19444444444444445" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_profile.xml" value="0.14432989690721648" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_search.xml" value="0.14432989690721648" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/ic_selector.xml" value="0.19444444444444445" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/image_view_smooth_background.xml" value="0.14432989690721648" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/progress_of_seekbar.xml" value="0.19444444444444445" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/sb_progress_drawable.xml" value="0.19444444444444445" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/seekbar_border.xml" value="0.19444444444444445" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/seekbar_progress.xml" value="0.19444444444444445" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/seekbar_thumb.xml" value="0.19444444444444445" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/simple_orange_lines.xml" value="0.19444444444444445" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/drawable/tab_color_selector.xml" value="0.14432989690721648" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/font/fonts.xml" value="0.15520833333333334" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/activity_main.xml" value="0.16" />
-        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/fragment_grid.xml" value="0.2" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/fragment_profile.xml" value="0.1675925925925926" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/fragment_search.xml" value="0.22" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/item_devices.xml" value="0.33" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/item_horizontals.xml" value="0.18009259259259258" />
+        <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/layout/item_panel.xml" value="0.18009259259259258" />
         <entry key="..\:/X-Lab/zAndroidStudio/SmartHome/app/src/main/res/menu/menu_items.xml" value="0.21" />
       </map>
     </option>
