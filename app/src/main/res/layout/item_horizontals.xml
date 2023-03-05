@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_alignParentStart="true"
+    android:id="@+id/homeHumidityCv"
+    android:layout_below="@+id/homeImgView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="18dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    card_view:cardElevation="20"
+    android:backgroundTint="@color/darkBackgroundSecondary">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="18dp">
+
+        <RelativeLayout
+            android:id="@+id/homeHumidityRl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/homeHumidityPercentTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_regular"
+                android:text="36%"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/homeHumidityImgView"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_humidity"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/homeHumidityNameTx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeHumidityRl"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="Humidifier\nAir"
+            android:textColor="@color/tab_color_unselected"
+            android:textSize="13sp" />
+
+        <View
+            android:id="@+id/homeViewSeperator"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/homeHumidityNameTx"
+            android:layout_marginTop="25dp"
+            android:background="#393535" />
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/homeViewSeperator"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/homeHumiditySwitcherRl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/homeHumiditySwitcherTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/manrope_regular"
+                android:text="Mode 2"
+                android:textColor="@color/tab_color_unselected"
+                android:textSize="13sp" />
+
+            <com.fynn.switcher.Switch
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                app:checked="true"
+                app:spotOffColor="@color/white"
+                app:spotOnColor="@color/darkBackgroundSecondary"
+                app:switchOffColor="@color/darkBackground"
+                app:switchOnColor="@color/tab_color_selected" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
