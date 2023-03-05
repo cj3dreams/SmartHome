@@ -13,11 +13,11 @@
     app:cardCornerRadius="25dp"
     app:cardPreventCornerOverlap="true"
     card_view:cardElevation="20"
-    android:backgroundTint="@color/darkBackgroundSecondary"
-    >
-
+    android:backgroundTint="@color/darkBackgroundSecondary">
 
     <RelativeLayout
+        android:layout_gravity="center"
+        android:gravity="center"
         android:id="@+id/devicesRl"
         android:background="@drawable/dashed_lines"
         android:clickable="true"
@@ -49,20 +49,18 @@
             tools:text="Bork V530" />
 
         <TextView
-            android:gravity="center"
             android:id="@+id/devicesInfoTx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/devicesNameTx"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/manrope_regular"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
             android:text="Vacuum cleaner"
-            android:layout_centerHorizontal="true"
             android:textColor="@color/tab_color_unselected"
             android:textSize="13sp" />
-
-
-
 
     </RelativeLayout>
 
