@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.cj3dreams.smarthome.R
 import com.cj3dreams.smarthome.model.DevicesModel
@@ -19,7 +17,6 @@ class SearchDevicesAdapter(private val list: List<DevicesModel>): RecyclerView.A
     class SearchDevicesViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
         val devicesSearchCv = view.findViewById(R.id.devicesSearchCv) as MaterialCardView
-        val devicesRl = view.findViewById(R.id.devicesRl) as RelativeLayout
         var devicesImgView = view.findViewById(R.id.devicesImgView) as ImageView
         val devicesNameTx = view.findViewById(R.id.devicesNameTx) as TextView
         val devicesInfoTx = view.findViewById(R.id.devicesInfoTx) as TextView
@@ -39,22 +36,19 @@ class SearchDevicesAdapter(private val list: List<DevicesModel>): RecyclerView.A
         holder.devicesNameTx.text = itemData.devicesNameTx
         holder.devicesInfoTx.text = itemData.devicesInfoTx
         if (position == 0) {
-            holder.devicesSearchCv.strokeWidth = 1
+            holder.devicesSearchCv.strokeWidth = 2
             holder.devicesSearchCv.strokeColor = holder.itemView.rootView.context
                 .resources.getColor(R.color.tab_color_selected)
         }
         if (position == 3) {
-
             val params: ViewGroup.LayoutParams = holder.devicesImgView.layoutParams
-            params.width = 123
-            params.height = 123
+            params.width = 120
+            params.height = 120
             holder.devicesImgView.layoutParams = params
             holder.devicesSearchCv.backgroundTintList = holder.itemView.rootView
                 .context.resources.getColorStateList(R.color.darkBackground)
-
             holder.devicesInfoTx.setTextColor(holder.itemView.rootView.context
                 .resources.getColor(R.color.tab_color_selected))
-
         }
     }
 
